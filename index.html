@@ -1,0 +1,54 @@
+<html>
+  <head>
+      <meta charset='utf-8'>
+      <title>🚀Rocket Smasher</title>
+      <link rel="icon" href="https://img.icons8.com/bubbles/100/000000/rocket.png"  type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="classes/events.js"></script>
+    <script src="./classes/sketch.js"></script>
+    <script src="./classes/game.js"></script>
+    <script src="./classes/player.js"></script>
+    <script src="./classes/moveable.js"></script>
+    <script src="./classes/renderers.js"></script>
+    <script src="./classes/rocket.js"></script>
+    <script src="./classes/particle.js"></script>
+    <script src="./classes/star.js"></script>
+    <script src="./classes/scoreTip.js"></script>
+    <script src="./classes/gun.js"></script>
+    <script src="./classes/followRocket.js"></script>
+    <script src="./classes/gravityMine.js"></script>
+    <script src="./classes/message.js"></script>
+    <script src="classes/bomb.js"></script>
+    <script src="classes/asteroid.js"></script>
+  </head>
+  <body id="body" oncontextmenu="return false;">
+    
+    <embed name="music" src="./assets/Rhinoceros.mp3" loop="true" hidden="true" autostart="true" />
+    <audio name="explosion1" id="explosion1" src="./assets/explosion1.wav" hidden="true" autostart="false"></audio>
+    <audio name="explosion2" id="explosion2" src="./assets/explosion2.mp3" hidden="true" autostart="false"></audio>
+    <audio name="bomb" id="bomb" src="./assets/bomb.wav" hidden="true" autostart="false"></audio>
+    <div id="help" class="help">
+        <div>
+          <div id="playButton" class="button">Play Game</div>
+        <h1 style="color: rgb(21, 29, 77);">Rocket Smasher</h1>
+        <h3>How To Play</h3>
+        <p>Protect The Earth! If Earth's Population Reaches 0 It's Game Over! Earn Powerups for Protecting Earth to Aid in your Endeavors.</p>
+        <h3>Controls</h3>
+        <p>Default Attack - Left Click on Individual Rockets</p>
+        <p>Gravity Mine - Right Click</p>
+        <p>Nuke - Spacebar</p>
+        <p>Toggle Inventory - i</p>
+      </div>
+    </div>
+    <script>
+      let playBtn = document.getElementById("playButton");
+      playBtn.addEventListener("click", ()=>{
+        document.getElementById("body").scrollIntoView({block: 'start', behavior: 'smooth'})
+      })
+    </script>
+  </body>
+</html>
